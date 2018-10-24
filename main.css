@@ -15,13 +15,17 @@ body{
 
 .loader{
 	position:absolute;
-	top:0;bottom:0;left:0;right:0;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
 	margin:auto
 }
 
 .rotating-left{
 animation:rotating-left 1s linear infinite;
 }
+
 @keyframes rotating-left {
 	from {
 		-ms-transform: rotate(0deg);
@@ -62,52 +66,59 @@ animation:rotating-right 1s linear infinite;
 	  }
 }
 
-.rotating-left:nth-child(1) {animation-duration:30s}
-.rotating-left:nth-child(2) {animation-duration:40s}
-.rotating-left:nth-child(3) {animation-duration:50s}
-.rotating-left:nth-child(4) {animation-duration:60s}
-.rotating-left:nth-child(5) {animation-duration:70s}
-.rotating-left:nth-child(6) {animation-duration:110s}
-.rotating-right:nth-child(7) {animation-duration:20s}
-.rotating-right:nth-child(8) {animation-duration:30s}
-.rotating-right:nth-child(9) {animation-duration:50s}
-.rotating-right:nth-child(10) {animation-duration:50s}
+.rotating-left:nth-child(1) {animation-duration:40s}
+.rotating-left:nth-child(2) {animation-duration:60s}
+.rotating-left:nth-child(3) {animation-duration:20s}
+.rotating-left:nth-child(4) {animation-duration:10s}
+.rotating-left:nth-child(5) {animation-duration:50s}
+.rotating-left:nth-child(6) {animation-duration:120s}
+.rotating-right:nth-child(7) {animation-duration:40s}
+.rotating-right:nth-child(8) {animation-duration:20s}
+.rotating-right:nth-child(9) {animation-duration:60s}
+.rotating-right:nth-child(10) {animation-duration:80s}
 
 
 
 .text{
 	position: absolute;
 	top: 10%;
-    left: 10%;
+    left: 5%;
 	width: 30%;
 }
 p{
 	
-    -webkit-animation-name: textanimat;  /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
-    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
-    -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
-    animation-name: textanimat;
+     -webkit-animation-name: textanimat; 
+    -webkit-animation-duration: 3s;     
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode: both;
+     animation-name: textanimat;
     animation-duration: 2s;    
     animation-delay: .5s;
-    animation-fill-mode: both;
-	position: absolute;
-	
+    animation-fill-mode: both;  
+	position: absolute; 
     font-size: 10px;
     font-weight: 200;
    	opacity: 1;
 	overflow: hidden;
     color: whitesmoke;
 	font-family: monospace;
+
 	
 }
 
 
 
 @keyframes textanimat {
-	0%   {opacity: 1; top:0%; width: 50%;}
-	90% {opacity: .8;  	width: 55%;} 
-    100% {opacity: 0;  	width: 60%;} 
+	0%   {opacity: 1; top:0%; width: 70%;}
+	90% {opacity: .8;  	width: 85%;} 
+    100% {opacity: 0;  	width: 70%;} 
+}
+
+@keyframes textanimat-mobile {
+	0%   {opacity: 1; width: 100%;}
+	50% {opacity: .8; width: 96%;} 
+	100% {opacity: 0; width: 100%;} 
+	
 }
 
 
@@ -134,4 +145,27 @@ p{
 		display: none
 	}
 	
+}
+
+@media (max-width: 600px) {
+	.text{
+	position: absolute;
+
+   left: 0%; 
+   right: 0%; 
+    top: 75%;
+    text-align: center;
+    width: 100%;
+	}
+
+	p{
+		font-size: 8px;
+		text-align: center;
+		-webkit-animation-name: textanimat-mobile; 
+	
+		 animation-name: textanimat-mobile;
+
+		line-height: 1;
+	}
+
 }
