@@ -1,0 +1,137 @@
+html{
+	height:100%;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+
+}
+
+body{
+	height:100%;
+	min-width:1060px;
+	margin:0;
+	background-image: linear-gradient(to top, #172c80 , #122364,#172c80);
+}
+
+.loader{
+	position:absolute;
+	top:0;bottom:0;left:0;right:0;
+	margin:auto
+}
+
+.rotating-left{
+animation:rotating-left 1s linear infinite;
+}
+@keyframes rotating-left {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	  }
+	  to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	  }
+}
+
+
+.rotating-right{
+animation:rotating-right 1s linear infinite;
+}
+@keyframes rotating-right {
+	from {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+
+	  }
+	  to {
+	
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	  }
+}
+
+.rotating-left:nth-child(1) {animation-duration:30s}
+.rotating-left:nth-child(2) {animation-duration:40s}
+.rotating-left:nth-child(3) {animation-duration:50s}
+.rotating-left:nth-child(4) {animation-duration:60s}
+.rotating-left:nth-child(5) {animation-duration:70s}
+.rotating-left:nth-child(6) {animation-duration:110s}
+.rotating-right:nth-child(7) {animation-duration:20s}
+.rotating-right:nth-child(8) {animation-duration:30s}
+.rotating-right:nth-child(9) {animation-duration:50s}
+.rotating-right:nth-child(10) {animation-duration:50s}
+
+
+
+.text{
+	position: absolute;
+	top: 10%;
+    left: 10%;
+	width: 30%;
+}
+p{
+	
+    -webkit-animation-name: textanimat;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+    animation-name: textanimat;
+    animation-duration: 2s;    
+    animation-delay: .5s;
+    animation-fill-mode: both;
+	position: absolute;
+	
+    font-size: 10px;
+    font-weight: 200;
+   	opacity: 1;
+	overflow: hidden;
+    color: whitesmoke;
+	font-family: monospace;
+	
+}
+
+
+
+@keyframes textanimat {
+	0%   {opacity: 1; top:0%; width: 50%;}
+	90% {opacity: .8;  	width: 55%;} 
+    100% {opacity: 0;  	width: 60%;} 
+}
+
+
+
+.line-loadr {
+	background-color: beige;
+	width: 0px;
+	height: .5px;
+	animation-name: loadr;
+    animation-duration: 4s;    
+    animation-delay: .5s;
+    animation-fill-mode: both;
+	position: absolute;
+	bottom: 0
+}
+
+
+@keyframes loadr{
+
+	90%{
+		width: 100%
+	}
+	100%{
+		display: none
+	}
+	
+}
